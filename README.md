@@ -1,11 +1,9 @@
 Description
 ===========
 
-Installs and configures zenphoto 1.3. from a public repository on github
-including a proper vhost for your Apache webserver.
+Installs and configures zenphoto 1.3. from a public repository on github including a proper vhost for your Apache webserver. Please note that you still need to run setup.php within your Browser to finish the installation process of Zenphoto.
 
-Please note that you still need to run setup.php within your Browser to
-finish the installation process of Zenphoto.
+This cookbook is mainly here on github to remind me that it exists. If you want to use it you may need to tweak a few things.
 
 Requirements
 ============
@@ -18,15 +16,17 @@ Platform:
 * RedHat
 * Fedora
 
-This cookbook relies on the application and database cookbook to work.
+This cookbook relies on the application and database cookbook to work. Please note that you need to slightly adjust the application cookbook if you'll want to use this recipe.
 
 Attributes
 ==========
 
-No attributes so far.
+* default[:apache][:listen_ports] = [ "80", "443" ]
 
 Usage
 =====
+
+Below you'll find a data bag in json notation which you'll need to install zenphoto via this cookbook.
 
     {
       "id": "zenphoto",
